@@ -99,7 +99,6 @@ public class WaveSpawner : MonoBehaviour
                 Vector3 randomPos = new Vector3(Random.Range(-6f, 6f), Random.Range(-4f, 4f), 0f);
                 GameObject pickup = Instantiate(prefabToSpawn, randomPos, Quaternion.identity);
 
-                // Uses the prefab's correct, natural size
                 Vector3 targetScale = prefabToSpawn.transform.localScale;
                 pickup.transform.localScale = Vector3.zero;
                 pickup.transform.DOScale(targetScale, 0.3f).SetEase(Ease.OutBack).SetLink(pickup);
