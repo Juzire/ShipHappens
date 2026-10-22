@@ -68,7 +68,6 @@ public class GameModeManager : MonoBehaviour
         Vector3 p1Pos = p1CoOpSpawnPoint != null ? p1CoOpSpawnPoint.position : new Vector3(-2f, 0f, 0f);
         Vector3 p2Pos = p2CoOpSpawnPoint != null ? p2CoOpSpawnPoint.position : new Vector3(2f, 0f, 0f);
 
-        // Spawn Player 1
         GameObject p1 = Instantiate(player1Prefab, p1Pos, Quaternion.identity);
         PlayerController c1 = p1.GetComponent<PlayerController>();
         if (c1 != null)
@@ -78,7 +77,6 @@ public class GameModeManager : MonoBehaviour
             c1.OnPlayerDeathCallback = HandlePlayerDeath;
         }
 
-        // Spawn Player 2
         GameObject p2 = Instantiate(player2Prefab, p2Pos, Quaternion.identity);
         PlayerController c2 = p2.GetComponent<PlayerController>();
         if (c2 != null)
